@@ -28,3 +28,21 @@ movies << {
     budget: 160,
     stars: ["Leonardo DiCaprio", "JGL"]
 }
+
+less = []
+movies.each do |x|
+  if x[:budget] < 100
+    less.push x[:title]
+  end
+end
+
+puts "These movies have a budget less than 100: #{less}"
+
+leo = []
+movies.each do |x|
+  if x[:stars].include? "Leonardo DiCaprio"
+    leo.push x[:title]
+  end
+end
+
+puts "These movies contain Leonardo DiCaprio: #{leo}"
